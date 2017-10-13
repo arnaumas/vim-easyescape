@@ -20,10 +20,6 @@ if !exists("g:easyescape_timeout")
     endif
 endif
 
-if !s:haspy3 && g:easyescape_timeout < 2000
-    echoerr "Python3 is required when g:easyescape_timeout < 2000"
-endif
-
 function! s:EasyescapeInsertCharPre()
     if has_key(g:easyescape_chars, v:char) == 0
         let s:current_chars = copy(g:easyescape_chars)
